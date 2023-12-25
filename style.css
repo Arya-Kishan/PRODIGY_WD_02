@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: black;
     color: white;
 }
 
@@ -11,13 +10,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    background: linear-gradient(transparent,black);
 }
-
+.main{
+    z-index: 2;
+    background: transparent;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(black,transparent);
+    pointer-events: none;
+}
 .box1{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10vh 0vh;
+    
 }
 .box1 img{
     width: 300px;
@@ -47,11 +56,12 @@ button{
     background-color: red;
     border: none;
     outline: none;
+    pointer-events:all;
 }
 button:hover{
-    background-color: white;
+    background-color: black;
     border: 2px solid black;
-    color: green;
+    color: white;
     box-shadow: 0 0 3px 1px white;
 }
 
@@ -63,4 +73,35 @@ button:hover{
 .lapDiv{
     text-align: center;
     width: 100%;
+}
+
+iframe{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    scale: 1;
+}
+
+@media screen and (max-width:550px) {
+
+    .box3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        place-items: center;
+        gap: 6vh;
+        padding: 2vh;
+    }
+
+    iframe{
+        height: 100%;
+        width: 150%;
+        top: 30%;
+        left: 20%;
+        transform: translate(-50%,-50%);
+        scale: .6;
+    }
 }
