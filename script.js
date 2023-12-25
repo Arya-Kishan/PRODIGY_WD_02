@@ -38,7 +38,7 @@ function watchstart() {
 
     timer = setInterval(() => {
         stopwatch();
-    }, 100);
+    }, 1000);
     start.disabled = true;
 }
 
