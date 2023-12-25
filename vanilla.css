@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0vh;
+}
+.box1 img{
+    width: 300px;
+    height: 300px;
+    border: 12px solid rgb(186, 0, 0);
+    border-radius: 50%;
+}
+.box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+    font-size: 50px;
+}
+
+.box3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    gap: 6vh;
+    padding: 2vh;
+}
+button{
+    width: 100px;
+    height: 25px;
+    background-color: red;
+    border: none;
+    outline: none;
+}
+button:hover{
+    background-color: white;
+    border: 2px solid black;
+    color: green;
+    box-shadow: 0 0 3px 1px white;
+}
+
+#lapContainer{
+    width: 100%;
+    display: grid;
+    gap: 10px;
+}
+.lapDiv{
+    text-align: center;
+    width: 100%;
+}
